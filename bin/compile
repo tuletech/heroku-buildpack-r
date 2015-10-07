@@ -51,8 +51,8 @@ else
   BUILD_PACK_VERSION="20150815-1425"
 fi
 
-S3_BUCKET="heroku-buildpack-r"
-R_BINARIES="http://${S3_BUCKET}.s3.amazonaws.com/${STACK}/R-${R_VERSION}-binaries-${BUILD_PACK_VERSION}.tar.gz"
+S3_BUCKET=$(cat $ENV_DIR/R_S3_BUCKET)
+R_BINARIES="http://${S3_BUCKET}.s3.amazonaws.com/R-${R_VERSION}-binaries-${BUILD_PACK_VERSION}.tar.gz"
 
 VENDOR_DIR="$BUILD_DIR/vendor"
 CRAN_MIRROR="http://cran.revolutionanalytics.com"
