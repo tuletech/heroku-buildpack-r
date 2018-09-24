@@ -108,7 +108,7 @@ echo "Executing init.r script" | indent
 RPROG
 
 echo "exporting env vars to: $LP_DIR/export"
-echo "PATH=\"/app/vendor/R/bin:\$PATH\"" >> $LP_DIR/export
+echo "PATH=/app/vendor/R/bin" >> $LP_DIR/export
 echo "$(cat $LP_DIR/export)"
 echo "R $R_VERSION successfully installed" | indent
 
