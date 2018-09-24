@@ -107,9 +107,9 @@ echo "Executing init.r script" | indent
   `cat $BUILD_DIR/init.r`
 RPROG
 
-echo $BUILDPACK_DIR
-echo "exporting env vars to: $LP_DIR"
-echo "export PATH=\"/app/vendor/R/bin:\$PATH\"" >> $LP_DIR/export
+echo "exporting env vars to: $LP_DIR/export"
+echo "PATH=\"/app/vendor/R/bin:\$PATH\"" >> $LP_DIR/export
+echo "$(cat $LP_DIR/export)"
 echo "R $R_VERSION successfully installed" | indent
 
 # need to copy binaries back so that any
