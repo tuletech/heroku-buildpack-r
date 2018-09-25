@@ -108,7 +108,6 @@ echo "Executing init.r script" | indent
   `cat $BUILD_DIR/init.r`
 RPROG
 
-echo "exporting env vars to: $LP_DIR/export"
 echo "export PATH=\"$VENDOR_DIR/R/bin:\$PATH\"" >> $LP_DIR/export
 echo "export LD_LIBRARY_PATH=\"$VENDOR_DIR/.apt/usr/lib/libblas:$VENDOR_DIR/.apt/usr/lib/lapack:$VENDOR_DIR/.apt/usr/lib/x86_64-linux-gnu:$VENDOR_DIR/.apt/usr/lib/i386-linux-gnu:$VENDOR_DIR/.apt/usr/lib:\$LD_LIBRARY_PATH\"" >> $LP_DIR/export
 echo "$(cat $LP_DIR/export)"
