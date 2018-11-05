@@ -356,7 +356,7 @@ cp "$BUILDPACK_DIR/bin/R_wrapper" "$BUILD_DIR/bin/R"
 cp "$BUILDPACK_DIR/bin/Rscript_wrapper" "$BUILD_DIR/bin/Rscript"
 
 topic $PATH
-topc $LD_PRELOAD
+topic $LD_PRELOAD
 # give environment to later buildpacks
 cat > "$BUILDPACK_DIR/export" <<EOL
 declare -x S3_BUCKET="$S3_BUCKET"
