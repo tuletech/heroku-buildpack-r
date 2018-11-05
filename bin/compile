@@ -355,6 +355,8 @@ mkdir -p "$BUILD_DIR/bin"
 cp "$BUILDPACK_DIR/bin/R_wrapper" "$BUILD_DIR/bin/R"
 cp "$BUILDPACK_DIR/bin/Rscript_wrapper" "$BUILD_DIR/bin/Rscript"
 
+topic $PATH
+topc $LD_PRELOAD
 # give environment to later buildpacks
 cat > "$BUILDPACK_DIR/export" <<EOL
 declare -x S3_BUCKET="$S3_BUCKET"
@@ -365,6 +367,7 @@ declare -x CRAN_MIRROR="$CRAN_MIRROR"
 declare -x R_VERSION="$R_VERSION"
 declare -x R_BUILDPACK_VERSION="$BUILD_PACK_VERSION"
 declare -x PATH="$PATH"
+declare -x LD_PRELOAD="$LD_PRELOAD"
 EOL
 
 # debug
