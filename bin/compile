@@ -364,6 +364,7 @@ declare -x CHROOT_DIR="$CHROOT_DIR"
 declare -x CRAN_MIRROR="$CRAN_MIRROR"
 declare -x R_VERSION="$R_VERSION"
 declare -x R_BUILDPACK_VERSION="$BUILD_PACK_VERSION"
+declare -x PATH="$PATH"
 EOL
 
 # debug
