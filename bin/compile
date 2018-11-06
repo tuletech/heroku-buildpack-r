@@ -359,6 +359,7 @@ export LD_LIBRARY_PATH="$FAKECHROOT_DIR/lib/fakechroot/:$LD_LIBRARY_PATH"
 export LD_PRELOAD="libfakechroot.so"
 topic $LD_PRELOAD
 topic $LD_LIBRARY_PATH
+topic $FAKECHROOT
 
 # give environment to later buildpacks
 cat > "$BUILDPACK_DIR/export" <<EOL
