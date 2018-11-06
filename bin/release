@@ -19,7 +19,7 @@ else
 ---
 # R Console
 default_process_types:
-  console: fakechroot fakeroot chroot /app/.root /bin/bash
+  console: /bin/bash
 EOF
 
 fi
