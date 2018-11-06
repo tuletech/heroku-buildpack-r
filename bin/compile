@@ -376,3 +376,4 @@ EOL
 END_TIME="$(date -u +%s)"
 ELAPSED="$(($END_TIME-$START_TIME))"
 echo "Build took $ELAPSED seconds to complete" | indent
+topic $FAKECHROOT
