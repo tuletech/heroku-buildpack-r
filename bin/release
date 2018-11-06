@@ -23,3 +23,5 @@ default_process_types:
 EOF
 
 fi
+echo "r - release"
+echo $FAKECHROOT
