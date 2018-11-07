@@ -355,8 +355,8 @@ mkdir -p "$BUILD_DIR/bin"
 cp "$BUILDPACK_DIR/bin/R_wrapper" "$BUILD_DIR/bin/R"
 cp "$BUILDPACK_DIR/bin/Rscript_wrapper" "$BUILD_DIR/bin/Rscript"
 
-export LD_LIBRARY_PATH="$FAKECHROOT_DIR/lib/fakechroot/:$LD_LIBRARY_PATH"
-export LD_PRELOAD="libfakechroot.so"
+export LD_LIBRARY_PATH="$FAKECHROOT_DIR/lib/fakechroot/:$CHROOT_DIR/usr/lib/x86_64-linux-gnu/;$LD_LIBRARY_PATH"
+# export LD_PRELOAD="libfakechroot.so"
 
 # give environment to later buildpacks
 cat > "$BUILDPACK_DIR/export" <<EOL
