@@ -2,5 +2,5 @@
 
 chroot_path=$(pwd)
 echo $chroot_path
-chroot_path="$chroot_path/.root"
+chroot_path="$chroot_path/.root/app"
 fakechroot fakeroot chroot $chroot_path /usr/bin/R "$@"
