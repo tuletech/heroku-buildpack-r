@@ -4,4 +4,4 @@ chroot_path=$(pwd)
 chroot_path="$chroot_path/.root"
 echo "R_wrapper"
 echo $chroot_path
-fakechroot fakeroot chroot /app/.root $chroot_path "$@"
+fakechroot fakeroot chroot $chroot_path /usr/bin/R "$@"
