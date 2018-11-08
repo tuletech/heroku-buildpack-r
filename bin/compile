@@ -355,9 +355,6 @@ mkdir -p "$BUILD_DIR/bin"
 cp "$BUILDPACK_DIR/bin/R_wrapper" "$BUILD_DIR/bin/R"
 cp "$BUILDPACK_DIR/bin/Rscript_wrapper" "$BUILD_DIR/bin/Rscript"
 
-export LD_LIBRARY_PATH="$FAKECHROOT_DIR/lib/fakechroot/:$CHROOT_DIR/usr/lib/x86_64-linux-gnu/;$LD_LIBRARY_PATH"
-# export LD_PRELOAD="libfakechroot.so"
-
 # give environment to later buildpacks
 cat > "$BUILDPACK_DIR/export" <<EOL
 declare -x S3_BUCKET="$S3_BUCKET"
@@ -367,9 +364,7 @@ declare -x CHROOT_DIR="$CHROOT_DIR"
 declare -x CRAN_MIRROR="$CRAN_MIRROR"
 declare -x R_VERSION="$R_VERSION"
 declare -x R_BUILDPACK_VERSION="$BUILD_PACK_VERSION"
-declare -x LD_LIBRARY_PATH="$LD_LIBRARY_PATH"
 declare -x BUILD_DIR="$BUILD_DIR"
-declare -x PATH="$PATH"
 EOL
 
 # debug
