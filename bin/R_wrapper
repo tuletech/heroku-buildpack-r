@@ -3,9 +3,5 @@
 # chroot_path=$(pwd)
 # chroot_path="$chroot_path/.root"
 
-chroot_path="/app/.root"
-if [ -z "$BUILD_DIR" ]; then
-  chroot_path="$BUILD_DIR/app/.root"
-fi
-
+chroot_path="$BUILD_DIR/app/.root"
 fakechroot fakeroot chroot $chroot_path /usr/bin/R "$@"
