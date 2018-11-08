@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# generating the chroot path is necessary since the rinruby gem is loaded
+# during deployment. If we don't generate the chroot path, we'll get an
+# error during deploy
 chroot_path=$(pwd)
 chroot_path="$chroot_path/.root"
 fakechroot fakeroot chroot $chroot_path /usr/bin/R "$@"
