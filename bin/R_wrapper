@@ -2,7 +2,9 @@
 
 # generating the chroot path is necessary since the rinruby gem is loaded
 # during deployment. If we don't generate the chroot path, we'll get an
-# error during deploy
+# error during deploy. Despite not running initializers/r.rb during deploy,
+# something else is loading the R instance so this necessary to avoid a deploy
+# error.
 chroot_path=$(pwd)
 chroot_path="$chroot_path/.root"
 fakechroot fakeroot chroot $chroot_path /usr/bin/R "$@"
